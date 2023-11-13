@@ -6,7 +6,7 @@ const app = express();
 app.use(morgan('dev'));
 app.use(express.json());
 
-app.get('test', (req, res) => {
+app.get('/test', (req, res) => {
   res.json('test OK');
 });
 
