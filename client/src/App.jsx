@@ -1,10 +1,13 @@
-import Register from "./Register";
+import axios from 'axios';
+import { UserContextProvider } from './userContext';
+import Router from './Router';
 
 function App() {
+  axios.defaults.baseURL = 'http://localhost:4000/chatApp/v1/users';
   return (
-    <div>
-      <Register />
-    </div>
+    <UserContextProvider>
+      <Router />
+    </UserContextProvider>
   );
 }
 
